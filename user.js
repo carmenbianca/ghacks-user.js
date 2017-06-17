@@ -79,8 +79,8 @@ user_pref("browser.search.geoip.timeout", 1);
 /* 0202: disable GeoIP-based search results
  * [NOTE] May not be hidden if Firefox has changed your settings due to your locale
  * [1] https://trac.torproject.org/projects/tor/ticket/16254 ***/
-user_pref("browser.search.countryCode", "US"); // (hidden pref)
-user_pref("browser.search.region", "US"); // (hidden pref)
+user_pref("browser.search.countryCode", "NL"); // (hidden pref)
+user_pref("browser.search.region", "NL"); // (hidden pref)
 /* 0203: disable using OS locale, force APP locale ***/
 user_pref("intl.locale.matchOS", false);
 /* 0204: set APP locale ***/
@@ -750,12 +750,12 @@ user_pref("gfx.font_rendering.opentype_svg.enabled", false);
  * [SETTING] Options>Fonts & Colors>Advanced>Serif|Sans-serif|Monospace
  * [SETUP] These are optional, comment out if you do not require them
  * [NOTE] Been using this for 18 months, it really grows on you ***/
-user_pref("font.name.serif.x-unicode", "Georgia");
-user_pref("font.name.serif.x-western", "Georgia"); // default Times New Roman
-user_pref("font.name.sans-serif.x-unicode", "Arial");
-user_pref("font.name.sans-serif.x-western", "Arial"); // default Arial
-user_pref("font.name.monospace.x-unicode", "Lucida Console");
-user_pref("font.name.monospace.x-western", "Lucida Console"); // default Courier New
+// user_pref("font.name.serif.x-unicode", "Georgia");
+// user_pref("font.name.serif.x-western", "Georgia"); // default Times New Roman
+// user_pref("font.name.sans-serif.x-unicode", "Arial");
+// user_pref("font.name.sans-serif.x-western", "Arial"); // default Arial
+// user_pref("font.name.monospace.x-unicode", "Lucida Console");
+// user_pref("font.name.monospace.x-western", "Lucida Console"); // default Courier New
 /* 1405: disable WOFF2 (Web Open Font Format) ***/
 user_pref("gfx.downloadable_fonts.woff2.enabled", false);
 /* 1406: disable CSS Font Loading API
@@ -953,7 +953,7 @@ user_pref("dom.imagecapture.enabled", false);
 user_pref("gfx.offscreencanvas.enabled", false);
 /* 2030: disable auto-play of HTML5 media
  * [WARNING] This may break video playback on various sites ***/
-user_pref("media.autoplay.enabled", false);
+user_pref("media.autoplay.enabled", true);
 /* 2031: disable audio auto-play in non-active tabs (FF51+)
  * [1] http://www.ghacks.net/2016/11/14/firefox-51-blocks-automatic-audio-playback-in-non-active-tabs/ ***/
 user_pref("media.block-autoplay-until-in-foreground", true);
@@ -1459,7 +1459,7 @@ user_pref("ghacks_user.js.parrot", "2700 syntax error: the parrot's joined the b
  * You can set exceptions under site permissions or use an extension (eg Cookie Controller)
  * 0=allow all 1=allow same host 2=disallow all 3=allow 3rd party if it already set a cookie
  * [SETTING] Options>Privacy>History>Custom Settings>Accept cookies from sites ***/
-user_pref("network.cookie.cookieBehavior", 2);
+user_pref("network.cookie.cookieBehavior", 1);
 /* 2702: set third-party cookies (if enabled, see above pref) to session-only
  * [1] https://feeding.cloud.geek.nz/posts/tweaking-cookies-for-privacy-in-firefox/
  * [2] http://kb.mozillazine.org/Network.cookie.thirdparty.sessionOnly ***/
@@ -1595,8 +1595,8 @@ user_pref("ui.submenuDelay", 150); // (hidden pref)
 /* 3018: set maximum number of daily bookmark backups to keep (default is 15) ***/
 user_pref("browser.bookmarks.max_backups", 2);
 /* 3020: control urlbar click behaviour (with defaults) ***/
-user_pref("browser.urlbar.clickSelectsAll", true);
-user_pref("browser.urlbar.doubleClickSelectsAll", false);
+user_pref("browser.urlbar.clickSelectsAll", false);
+user_pref("browser.urlbar.doubleClickSelectsAll", true);
 /* 3021a: control tab behaviours (with defaults)
  * open links in a new tab immediately to the right of parent tab, not far right ***/
 user_pref("browser.tabs.insertRelatedAfterCurrent", true);
